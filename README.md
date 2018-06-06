@@ -5,7 +5,7 @@ Introduction
 
 In this tutorial, I'll show you how I deployed a React app—which I created using create-react-app—to GitHub Pages.
 
-You can visit the deployed app, at https://gitname.github.io/react-gh-pages/.
+You can visit the deployed app, at https://kalpanadevaraj.github.io/clipboard/.
 
 This repository contains the files related to the app. The master branch contains the app's source code (the code the app's developers edit), and the gh-pages branch contains a built version of the app (i.e. the code that GitHub Pages serves to the app's visitors).
 
@@ -31,7 +31,7 @@ Prerequisites
     In the case of create-react-app, you can either install it globally (i.e. $ npm install -g create-react-app) or install it locally (i.e. $ npm install create-react-app). If you choose the latter, you will have to specify its path whenever you invoke it (e.g. path/to/node_modules/.bin/create-react-app).
 
    
-    A GitHub account. :octocat:
+    A GitHub account. : Create an account in github
 
 Procedure
 
@@ -52,7 +52,7 @@ Procedure
     $ cd clipboard
     $ npm install gh-pages --save-dev
 
-        The commands shown in the following steps can all be issued from within the app's folder.
+    The commands shown in the following steps can all be issued from within the app's folder.
 
     Add some properties to the app's package.json file. (3 minutes)
         At the top level, add a homepage property. Define its value to be the string http://{username}.github.io/{repo-name}, where {username} is your GitHub username, and {repo-name} is the name of the GitHub repository you created in step 1. Since my GitHub username is gitname and the name of my GitHub repository is react-gh-pages, I added the following property:
@@ -68,7 +68,7 @@ Procedure
       "deploy": "gh-pages -d build"
     }
 
-        Shortcut: Instead of adding those properties using a text editor; if you have sed installed on your system, you can add the properties by issuing the following shell commands:
+    Shortcut: Instead of adding those properties using a text editor; if you have sed installed on your system, you can add the properties by issuing the following shell commands:
 
     $ sed -i '5i\  "homepage": "http://kalpanadevaraj.github.io/clipboard",' ./package.json
     $ sed -i '15i\    "predeploy": "npm run build",' ./package.json
@@ -96,11 +96,8 @@ Procedure
     Optionally, commit your source code to the "master" branch and push your commit to GitHub. (1 minute)
 
     $ git add .
-    $ git commit -m "Create a React app and publish it to GitHub Pages"
+    $ git commit -m "Created clipboard app and publish it to GitHub Pages "
     $ git push origin master
-
-        I recommend exploring the GitHub repository once again at this point. When I did that, I noticed that a master branch now existed, and it contained the app's source code.
-        So, the master branch held the source code, and the gh-pages branch held the built app code.
 
 References
 
